@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Warm, elegant color palette inspired by design references */
+  /* Warm cream/beige backgrounds with English Green accents */
+  --background: oklch(0.96 0.01 85); /* Warm cream background */
+  --foreground: oklch(0.2 0.01 85); /* Dark warm gray for text */
+  --card: oklch(0.98 0.005 85); /* Slightly lighter cream for cards */
+  --card-foreground: oklch(0.2 0.01 85);
+  --popover: oklch(0.98 0.005 85);
+  --popover-foreground: oklch(0.2 0.01 85);
+  /* English Green as primary accent */
+  --primary: oklch(0.35 0.12 155); /* Rich English Green */
+  --primary-foreground: oklch(0.98 0.005 85); /* Cream text on green */
+  --secondary: oklch(0.5 0.01 85); /* Warm medium gray */
+  --secondary-foreground: oklch(0.98 0.005 85);
+  --muted: oklch(0.92 0.01 85); /* Warm light gray */
+  --muted-foreground: oklch(0.45 0.01 85);
+  --accent: oklch(0.88 0.015 85); /* Warm accent */
+  --accent-foreground: oklch(0.2 0.01 85);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 85);
+  --border: oklch(0.88 0.01 85);
+  --input: oklch(0.94 0.01 85);
+  --ring: oklch(0.35 0.12 155 / 0.3);
+  --chart-1: oklch(0.35 0.12 155);
+  --chart-2: oklch(0.2 0.01 85);
+  --chart-3: oklch(0.5 0.01 85);
+  --chart-4: oklch(0.75 0.01 85);
+  --chart-5: oklch(0.45 0.12 155);
+  --radius: 1rem;
+  --sidebar: oklch(0.96 0.01 85);
+  --sidebar-foreground: oklch(0.2 0.01 85);
+  --sidebar-primary: oklch(0.35 0.12 155);
+  --sidebar-primary-foreground: oklch(0.98 0.005 85);
+  --sidebar-accent: oklch(0.92 0.01 85);
+  --sidebar-accent-foreground: oklch(0.2 0.01 85);
+  --sidebar-border: oklch(0.88 0.01 85);
+  --sidebar-ring: oklch(0.35 0.12 155 / 0.3);
+
+  /* === Explicit English Green Shades === */
+  --english-green-base: oklch(0.35 0.12 155); /* Mismo que --primary */
+  --english-green-light: oklch(0.6 0.08 155); /* Verde suave para fondos claros */
+  --english-green-deep: oklch(0.25 0.15 155); /* Verde muy oscuro para contraste */
+}
+
+.dark {
+  /* Fondo gris-azulado cálido */
+  --background: oklch(0.35 0.02 210);
+  --foreground: oklch(0.92 0.01 85);      /* texto general */
+  --title-foreground: #ffffff;            /* títulos en blanco */
+  --button-foreground: #ffffff;           /* textos de botones y spans */
+  --subtitle-foreground: #ffffff;         /* subtítulos en blanco también */
+  --icon-foreground: #ffffff;             /* iconos en blanco */
+  --card: oklch(0.42 0.015 210);
+  --card-foreground: oklch(0.92 0.01 85);
+  --popover: oklch(0.42 0.015 210);
+  --popover-foreground: oklch(0.92 0.01 85);
+
+  /* English Green */
+  --primary: oklch(0.55 0.18 155);
+  --primary-foreground: var(--button-foreground);
+  --secondary: oklch(0.45 0.01 85);
+  --secondary-foreground: var(--subtitle-foreground);
+  --muted: oklch(0.5 0.01 210);
+  --muted-foreground: var(--subtitle-foreground);
+  --accent: oklch(0.48 0.01 210);
+  --accent-foreground: var(--subtitle-foreground);
+  --destructive: oklch(0.7 0.22 25);
+  --destructive-foreground: var(--button-foreground);
+
+  --border: oklch(0.5 0.01 210);
+  --input: oklch(0.45 0.01 210);
+  --ring: oklch(0.55 0.18 155 / 0.3);
+
+  --chart-1: oklch(0.55 0.18 155);
+  --chart-2: oklch(0.85 0.01 210);
+  --chart-3: oklch(0.6 0.01 210);
+  --chart-4: oklch(0.7 0.01 210);
+  --chart-5: oklch(0.65 0.18 155);
+
+  --sidebar: oklch(0.42 0.015 210);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: oklch(0.55 0.18 155);
+  --sidebar-primary-foreground: var(--button-foreground);
+  --sidebar-accent: oklch(0.48 0.01 210);
+  --sidebar-accent-foreground: var(--subtitle-foreground);
+  --sidebar-border: oklch(0.5 0.01 210);
+  --sidebar-ring: oklch(0.55 0.18 155 / 0.3);
+
+  /* English Green Shades */
+  --english-green-base: oklch(0.55 0.18 155);
+  --english-green-light: oklch(0.7 0.2 155);
+  --english-green-deep: oklch(0.45 0.12 155);
+}
+
+/* Aplicar colores específicos */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .title {
+  color: var(--title-foreground);
+}
+
+.dark h2.subtitle,
+.dark h3.subtitle,
+.dark .subtitle {
+  color: var(--subtitle-foreground);
+}
+
+.dark svg,
+.dark .icon {
+  color: var(--icon-foreground);
+}
+
+.dark button,
+.dark button span,
+.dark .btn-text,
+.dark .button-text {
+  color: var(--button-foreground);
+}
+
+
+/* Aplicar colores específicos */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .title {
+  color: var(--title-foreground);
+}
+
+.dark h2.subtitle,
+.dark h3.subtitle,
+.dark .subtitle {
+  color: var(--subtitle-foreground);
+}
+
+.dark svg,
+.dark .icon {
+  color: var(--icon-foreground);
+}
+
+.dark button,
+.dark button span,
+.dark .btn-text,
+.dark .button-text {
+  color: var(--button-foreground);
+}
+
+
+/* Aplicar colores específicos */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .title {
+  color: var(--title-foreground);
+}
+
+.dark h2.subtitle,
+.dark h3.subtitle,
+.dark .subtitle {
+  color: var(--subtitle-foreground);
+}
+
+.dark svg,
+.dark .icon {
+  color: var(--icon-foreground);
+}
+
+
+/* Aplicar títulos en blanco */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .title {
+  color: var(--title-foreground);
+}
+
+
+
+
+
+@theme inline {
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* === Mapeo de English Green para el tema Tailwind === */
+  --color-english-green-base: var(--english-green-base);
+  --color-english-green-light: var(--english-green-light);
+  --color-english-green-deep: var(--english-green-deep);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .border-border {
+    border-color: var(--border);
+  }
+  .outline-ring\/50 {
+    outline-color: rgb(var(--ring) / 0.5);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .bg-muted\/50 {
+    background-color: rgb(var(--muted) / 0.5);
+  }
+
+  /* Custom scrollbar with warm tones */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--primary) / 0.3);
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--primary) / 0.5);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Enhanced shadow utilities for elegant depth */
+  .shadow-subtle {
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.04), 0 1px 3px -1px rgb(0 0 0 / 0.03);
+  }
+
+  .shadow-subtle-lg {
+    box-shadow: 0 8px 24px -4px rgb(0 0 0 / 0.06), 0 4px 12px -2px rgb(0 0 0 / 0.04);
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 12px 40px -8px rgb(0 0 0 / 0.08), 0 6px 16px -4px rgb(0 0 0 / 0.05);
+  }
+}
