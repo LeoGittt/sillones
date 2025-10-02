@@ -145,7 +145,7 @@ export default function HomePage() {
   });
 
   // Carrusel de imágenes de fondo
-  const heroImages = ["/8.jpg", "/12.jpg", "/3.jpg", ];
+  const heroImages = ["/88.jpg", "/12.jpg", "/3.jpg", "99.jpg"];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -180,98 +180,132 @@ export default function HomePage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50">
-          {/* Carrusel minimalista */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
+          {/* Carrusel con efectos mejorados */}
           <div className="absolute inset-0 z-0">
             <div className="relative w-full h-full">
               {heroImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                    index === currentImageIndex ? "opacity-100" : "opacity-0"
+                  className={`absolute inset-0 transition-all duration-[1500ms] ease-in-out ${
+                    index === currentImageIndex 
+                      ? "opacity-100 scale-100" 
+                      : "opacity-0 scale-105"
                   }`}
                 >
                   <Image
                     src={image}
-                    alt={`Sillón ${index + 1}`}
+                    alt={`Sillón premium ${index + 1}`}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center filter brightness-110 contrast-105"
                     priority={index === 0}
-                    quality={90}
+                    quality={95}
                   />
-                  {/* Overlay sutil */}
-                  <div className="absolute inset-0 bg-white/10"></div>
+                  {/* Overlay mejorado con más opacidad */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-black/10"></div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Controles discretos con verde inglés */}
+          {/* Elementos decorativos flotantes */}
+          <div className="absolute top-1/4 left-8 w-32 h-32 bg-[#1A3F2B]/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/3 right-12 w-24 h-24 bg-emerald-300/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+
+          {/* Controles sin fondo */}
           <div className="absolute bottom-8 right-8 z-20">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               {heroImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    // Aumenté un poco el tamaño para visibilidad
+                  className={`relative w-3 h-3 rounded-full transition-all duration-500 ${
                     index === currentImageIndex
-                      ? "bg-[#1A3F2B]" // Botón activo: Verde Inglés Sólido
-                      : "bg-slate-400 hover:bg-[#1A3F2B]/60" // Botón inactivo: Gris sutil, hover en verde
+                      ? "bg-[#1A3F2B] dark:bg-emerald-400 scale-125 shadow-lg" 
+                      : "bg-white/60 dark:bg-slate-400/60 hover:bg-[#1A3F2B]/70 dark:hover:bg-emerald-400/70 hover:scale-110"
                   }`}
-                />
+                >
+                  {index === currentImageIndex && (
+                    <div className="absolute inset-0 bg-[#1A3F2B] dark:bg-emerald-400 rounded-full animate-ping opacity-30"></div>
+                  )}
+                </button>
               ))}
             </div>
           </div>
 
           <div className="container mx-auto px-4 py-20 relative z-10">
-            <div className="max-w-2xl mx-auto">
-              {/* Contenido minimalista */}
-              <div className="text-center space-y-12">
-                <div className="space-y-8">
-                  {/* Título limpio con acentos verdes */}
-                  <div className="space-y-6">
-                    <h1 className="font-sans text-6xl md:text-6xl font-light tracking-tight text-emerald-800">
-                      Confort
-                      <span className="block text-[#1A3F2B] mt-2">
+            <div className="max-w-4xl mx-auto">
+              {/* Contenido principal mejorado */}
+              <div className="text-center space-y-16">
+                
+                {/* Badge superior */}
+                <div className="inline-flex items-center gap-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm px-6 py-3 rounded-full border border-white/40 dark:border-slate-700/60 shadow-lg">
+                  <div className="w-2 h-2 bg-[#1A3F2B] dark:bg-emerald-400 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-[#1A3F2B] dark:text-emerald-400 tracking-wide">
+                    Fabricación Artesanal 
+                  </span>
+                </div>
+
+                <div className="space-y-10">
+                  {/* Título mejorado con animación */}
+                  <div className="space-y-8">
+                    <h1 className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tight leading-none">
+                      <span className="block text-[#1A3F2B] dark:text-emerald-400 font-semibold drop-shadow-lg">
+                        Confort
+                      </span>
+                      <span className="block text-white font-semibold dark:text-white mt-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg">
                         y Diseño
+                      </span>
+                      <span className="block text-xl sm:text-2xl md:text-4xl font-light text-white/90 dark:text-white/90 mt-4 tracking-wide drop-shadow-md">
+                        para tu hogar
                       </span>
                     </h1>
 
-                    {/* Línea divisoria con verde */}
-                    <div className="w-16 h-px bg-[#1A3F2B]/30 mx-auto"></div>
+                    {/* Línea divisoria animada */}
+                    <div className="flex justify-center">
+                      <div className="w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
+                    </div>
 
-                    <p className="text-lg text-slate-800 leading-relaxed ">
-                      Sillones artesanales de calidad superior.
-                      <span className="block mt-2 text-slate-800">
-                        Diseño atemporal, fabricación local.
+                    <p className="text-xl md:text-2xl text-white dark:text-white leading-relaxed font-light max-w-3xl mx-auto drop-shadow-md">
+                      Creamos sillones únicos con{" "}
+                      <span className="text-gray-600 font-semibold dark:text-white ">
+                        más de 15 años de experiencia
+                      </span>
+                      <span className="block mt-3 text-lg md:text-xl text-white/90 dark:text-white/90 font-semibold">
+                        Diseño personalizado • Calidad premium • Fabricación local
                       </span>
                     </p>
                   </div>
                 </div>
 
-                {/* Botones con verde inglés y fondo */}
-                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                  {/* Botón Principal (Ver colección) */}
+                {/* Botones más pequeños */}
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
+                  {/* Botón Principal */}
                   <Link
                     href="/productos"
-                    className="px-8 py-3 bg-emerald-800 text-white text-sm font-medium rounded-lg hover:bg-[#153021] transition-all duration-300 shadow-lg hover:shadow-xl" // Añadida Sombra sutil
+                    className="group relative w-full sm:w-44 px-6 py-3 bg-[#1A3F2B] dark:bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-[#153021] dark:hover:bg-emerald-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden"
                   >
-                    Ver colección
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1A3F2B] to-emerald-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <span className="relative flex items-center justify-center gap-2">
+                      Ver Productos
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
                   </Link>
-                  {/* Botón Secundario (Consultar) con Fondo Sutil */}
+                  
+                  {/* Botón Secundario */}
                   <Link
                     href="/contacto"
-                    className="px-8 py-3 text-[#1A3F2B] dark:text-gray-800 bg-white border border-[#1A3F2B]/20 text-sm font-medium rounded-lg hover:bg-[#1A3F2B]/5 hover:border-[#1A3F2B] transition-all duration-300" // Cambios aquí para un fondo sutil y borde
+                    className="group w-full sm:w-44 px-6 py-3 text-[#1A3F2B] dark:text-emerald-400 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border-2 border-[#1A3F2B]/40 dark:border-emerald-400/50 text-sm font-medium rounded-lg hover:bg-[#1A3F2B]/5 dark:hover:bg-emerald-400/5 hover:border-[#1A3F2B] dark:hover:border-emerald-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                   >
-                    Consultar
+                    <span className="flex items-center justify-center gap-2">
+                      <MessageCircle className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+                      Consultar
+                    </span>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-
-          
         </section>
 
         {/* About Us - Rediseñado */}
@@ -363,7 +397,7 @@ export default function HomePage() {
 
                   <Link
                     href="/contacto"
-                    className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-[#1A3F2B]/20 hover:border-[#1A3F2B] text-[#1A3F2B] hover:bg-[#1A3F2B]/5 font-medium transition-all duration-300 rounded-lg"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-[#1A3F2B]/20 hover:border-[#1A3F2B] text-[#1A3F2B] dark:text-white hover:bg-[#1A3F2B]/5 font-medium transition-all duration-300 rounded-lg"
                   >
                     <MessageCircle className="h-4 w-4" />
                     <span>Hablemos de tu proyecto</span>

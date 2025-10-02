@@ -127,19 +127,37 @@ export function Navbar({ cartItemsCount = 0, onCartOpen, cartComponent }: Navbar
 
             {/* Actions - Con mejor diseño y micro-interacciones */}
             <div className="flex items-center space-x-1">
-              {/* Theme Toggle - Mejorado */}
+              {/* Theme Toggle - Simplificado y más claro */}
               {mounted && (
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={toggleTheme}
-                  className="relative rounded-xl hover:bg-primary/10 transition-all duration-300 group hover:scale-110"
+                  className="relative rounded-xl hover:bg-primary/10 transition-all duration-300 group"
+                  title={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-muted-foreground dark:text-foreground" />
-                  <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-muted-foreground dark:text-foreground" />
-                  <Sparkles className="absolute h-2 w-2 text-primary opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                  <span className="sr-only">Toggle theme</span>
+                  {/* Fondo del botón activo */}
+                  <div className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+                    theme === "dark" 
+                      ? "bg-slate-700/30 border border-slate-600/30" 
+                      : ""
+                  }`} />
+                  
+                  {/* Iconos con transición suave */}
+                  <div className="relative z-10">
+                    <Sun className={`h-4 w-4 transition-all duration-300 ${
+                      theme === "dark" 
+                        ? "rotate-90 scale-0 opacity-0" 
+                        : "rotate-0 scale-100 opacity-100 text-amber-600"
+                    }`} />
+                    <Moon className={`absolute inset-0 h-4 w-4 transition-all duration-300 ${
+                      theme === "dark" 
+                        ? "rotate-0 scale-100 opacity-100 text-slate-300" 
+                        : "rotate-90 scale-0 opacity-0"
+                    }`} />
+                  </div>
+                  
+                  <span className="sr-only">Cambiar tema</span>
                 </Button>
               )}
 
