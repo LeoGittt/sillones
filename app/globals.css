@@ -246,8 +246,14 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
+  html, body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  
+  /* Prevenir overflow horizontal en elementos contenedores */
+  .container {
+    @apply overflow-x-hidden;
   }
 }
 
@@ -303,4 +309,23 @@
   .shadow-elegant {
     box-shadow: 0 12px 40px -8px rgb(0 0 0 / 0.08), 0 6px 16px -4px rgb(0 0 0 / 0.05);
   }
+}
+
+/* Efectos de hover suaves para las imágenes */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.hover-float:hover {
+  animation: gentle-float 3s ease-in-out infinite;
+}
+
+/* Mejoras de transición para elementos interactivos */
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }

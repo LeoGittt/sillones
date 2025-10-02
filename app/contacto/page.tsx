@@ -68,7 +68,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white dark:bg-slate-950">
       <Navbar
         cartItemsCount={cartItems.length}
         onCartOpen={() => {}}
@@ -77,30 +77,36 @@ export default function ContactPage() {
 
       <main>
         {/* Page Header */}
-        <section className="container mx-auto px-4 py-4 pt-8">
-          <div className="text-center space-y-4 mb-4">
-            <SectionTag className="text-green-800">Contacto</SectionTag>
-            <h1 className="text-4xl md:text-5xl font-bold text-green-900">Ponte en Contacto</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <section className="container mx-auto px-4 py-16">
+          <div className="text-center space-y-6 mt-5 mb-2 max-w-2xl mx-auto">
+            <span className="text-xs font-medium text-[#1A3F2B]/60 dark:text-emerald-400/70 uppercase tracking-widest">
+              Contacto
+            </span>
+            <h1 className="font-light text-4xl md:text-5xl lg:text-6xl text-[#1A3F2B] dark:text-emerald-400">
+              Ponte en <span className="font-normal">Contacto</span>
+            </h1>
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-light">
               Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible
             </p>
           </div>
         </section>
 
         {/* Contact Form and Info */}
-        <section className="container mx-auto px-4 py-8">
+        <section className="container mx-auto px-4 ">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="shadow-subtle h-fit border border-green-100">
+              <Card className="border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-xl">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-green-900">Envíanos un Mensaje</CardTitle>
+                  <CardTitle className="text-2xl text-[#1A3F2B] dark:text-emerald-400 font-light">
+                    Envíanos un Mensaje
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-7">
-                    <div className="grid md:grid-cols-2 gap-4">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium text-green-800">
+                        <label htmlFor="name" className="text-sm font-light text-gray-700 dark:text-gray-300">
                           Nombre completo *
                         </label>
                         <Input
@@ -110,11 +116,11 @@ export default function ContactPage() {
                           onChange={handleInputChange}
                           placeholder="Tu nombre"
                           required
-                          className="focus:ring-2 focus:ring-green-700"
+                          className="h-12 rounded-lg border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-gray-100"
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium text-green-800">
+                        <label htmlFor="email" className="text-sm font-light text-gray-700 dark:text-gray-300">
                           Email *
                         </label>
                         <Input
@@ -125,12 +131,12 @@ export default function ContactPage() {
                           onChange={handleInputChange}
                           placeholder="tu@email.com"
                           required
-                          className="focus:ring-2 focus:ring-green-700"
+                          className="h-12 rounded-lg border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-gray-100"
                         />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium text-green-800">
+                      <label htmlFor="subject" className="text-sm font-light text-gray-700 dark:text-gray-300">
                         Asunto *
                       </label>
                       <Input
@@ -140,11 +146,11 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         placeholder="¿En qué podemos ayudarte?"
                         required
-                        className="focus:ring-2 focus:ring-green-700"
+                        className="h-12 rounded-lg border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-gray-100"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium text-green-800">
+                      <label htmlFor="message" className="text-sm font-light text-gray-700 dark:text-gray-300">
                         Mensaje *
                       </label>
                       <Textarea
@@ -155,13 +161,13 @@ export default function ContactPage() {
                         placeholder="Escribe tu mensaje aquí..."
                         rows={10}
                         required
-                        className="min-h-[200px] focus:ring-2 focus:ring-green-700"
+                        className="min-h-[200px] rounded-lg border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-gray-100 resize-none"
                       />
                     </div>
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full h-12 rounded-full text-base bg-green-900 text-white hover:bg-green-800"
+                      className="w-full h-12 rounded-lg text-sm font-light tracking-wide bg-[#1A3F2B] dark:bg-emerald-600 text-white hover:bg-[#153021] dark:hover:bg-emerald-500 transition-all duration-300"
                     >
                       Enviar Mensaje
                     </Button>
@@ -171,20 +177,20 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Info Cards */}
-            <div className="space-y-3">
+            <div className="space-y-4">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon
                 return (
-                  <Card key={index} className="shadow-subtle border border-green-100">
-                    <CardContent className="p-3">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <Icon className="h-4 w-4 text-green-800" />
+                  <Card key={index} className="border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-xl hover:border-[#1A3F2B] dark:hover:border-emerald-500 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-[#1A3F2B]/10 dark:bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Icon className="h-5 w-5 text-[#1A3F2B] dark:text-emerald-400" />
                         </div>
-                        <div>
-                          <h3 className="font-semibold mb-1 text-sm text-green-900">{info.title}</h3>
+                        <div className="space-y-2">
+                          <h3 className="font-normal text-[#1A3F2B] dark:text-emerald-400">{info.title}</h3>
                           {info.details.map((detail, idx) => (
-                            <p key={idx} className="text-xs text-muted-foreground">
+                            <p key={idx} className="text-sm text-gray-600 dark:text-gray-400 font-light">
                               {detail}
                             </p>
                           ))}
@@ -199,8 +205,8 @@ export default function ContactPage() {
         </section>
 
         {/* Map Section */}
-        <section className="container mx-auto py-4 px-4 mb-16">
-          <div className="rounded-2xl overflow-hidden shadow-subtle-lg border border-green-100">
+        <section className="container mx-auto py-8 px-4 mb-16">
+          <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878459418!3d40.74844097932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1629794729807!5m2!1sen!2sus"
               width="100%"
@@ -210,6 +216,7 @@ export default function ContactPage() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Nuestra ubicación"
+              className="grayscale dark:grayscale-0"
             />
           </div>
         </section>

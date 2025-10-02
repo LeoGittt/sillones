@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.app'
+    
 }
 
 export default function RootLayout({
@@ -70,9 +70,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="color-scheme" content="light dark" />
       </head>
-      <body className={`font-sans ${montserrat.variable} ${playfair.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
+      <body className={`font-sans ${montserrat.variable} ${playfair.variable} antialiased overflow-x-hidden`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="overflow-x-hidden">
+            {children}
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>

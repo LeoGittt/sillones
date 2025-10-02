@@ -25,7 +25,7 @@ export function WhatsAppFloat({
       className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 size-16"
       aria-label="Contactar por WhatsApp"
     >
-      <FaWhatsapp className="size-[100px]" />
+      <FaWhatsapp className="size-8" />
     </Button>
   )
 }

@@ -30,7 +30,7 @@ export default function AboutPage() {
   const handleUpdateCart = (items: Product[]) => setCartItems(items)
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-white dark:bg-slate-950">
       <Navbar
         cartItemsCount={cartItems.length}
         onCartOpen={() => {}}
@@ -39,45 +39,53 @@ export default function AboutPage() {
 
       <main>
         {/* Header */}
-        <section className="container mx-auto px-4 py-12 text-center">
-          <SectionTag className="bg-green-900/10 text-green-900 px-4 py-1 rounded-full w-fit mx-auto">
-            Nosotros
-          </SectionTag>
-          <h1 className="mt-4 text-4xl md:text-5xl font-bold text-green-900">
-            Conoce Nuestra Historia
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Descubre quiénes somos, qué nos motiva y por qué miles de clientes confían en nosotros
-          </p>
+        <section className="container mx-auto px-4 py-16 text-center">
+          <div className="space-y-6 max-w-2xl mt-5 mx-auto">
+            <span className="text-xs font-medium text-[#1A3F2B]/60 dark:text-emerald-400/70 uppercase tracking-widest">
+              Nosotros
+            </span>
+            <h1 className="font-light text-4xl md:text-5xl lg:text-6xl text-[#1A3F2B] dark:text-emerald-400">
+              Conoce nuestra <span className="font-normal">Historia</span>
+            </h1>
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-light">
+              Descubre quiénes somos, qué nos motiva y por qué miles de clientes confían en nosotros
+            </p>
+          </div>
         </section>
 
         {/* About */}
-        <section className="container mx-auto px-4 py-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <SectionTag className="bg-green-900/10 text-green-900 px-3 py-1 rounded-full w-fit">
-                Nuestra Misión
-              </SectionTag>
-              <h2 className="text-3xl md:text-4xl font-bold text-green-900">
-                Calidad y Confianza desde 2020
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+        <section className="container mx-auto px-4 py-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <span className="text-xs font-medium text-[#1A3F2B]/60 dark:text-emerald-400/70 uppercase tracking-widest">
+                  Nuestra Misión
+                </span>
+                <h2 className="font-light text-3xl md:text-4xl lg:text-5xl text-[#1A3F2B] dark:text-emerald-400">
+                  Calidad y Confianza <span className="font-normal">desde 2020</span>
+                </h2>
+                <div className="w-12 h-px bg-[#1A3F2B]/20 dark:bg-emerald-400/30"></div>
+              </div>
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed">
                 Somos una empresa comprometida con ofrecer productos de la más alta calidad a precios justos. 
                 Nuestra misión es brindar una experiencia de compra excepcional que supere las expectativas 
                 de nuestros clientes.
               </p>
-              <Button size="lg" asChild className="rounded-full bg-green-900 text-white hover:bg-green-800">
-                <Link href="/productos">Ver Productos</Link>
-              </Button>
+              <Link
+                href="/productos"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#1A3F2B] dark:bg-emerald-600 text-white text-sm font-light tracking-wide hover:bg-[#153021] dark:hover:bg-emerald-500 transition-all duration-300 rounded-lg"
+              >
+                Ver Productos
+              </Link>
             </div>
             <div className="relative">
-              <div className="aspect-[3/2] rounded-xl overflow-hidden shadow-md ring-1 ring-green-900/20">
+              <div className="aspect-[3/2] rounded-xl overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=350&width=500&text=Our+Team"
+                  src="/2.jpg"
                   alt="Nuestro equipo"
                   width={500}
                   height={350}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
                 />
               </div>
             </div>
@@ -85,30 +93,30 @@ export default function AboutPage() {
         </section>
 
         {/* Valores */}
-        <section className="bg-muted/30 py-16">
+        <section className="bg-white dark:bg-slate-950 py-24">
           <div className="container mx-auto px-4">
-            <div className="text-center space-y-4 mb-12">
-              <SectionTag className="bg-green-900/10 text-green-900 px-4 py-1 rounded-full w-fit mx-auto">
+            <div className="text-center space-y-6 mb-20 max-w-2xl mx-auto">
+              <span className="text-xs font-medium text-[#1A3F2B]/60 dark:text-emerald-400/70 uppercase tracking-widest">
                 Valores
-              </SectionTag>
-              <h2 className="text-3xl md:text-4xl font-bold text-green-900">
-                Lo que nos Define
+              </span>
+              <h2 className="font-light text-4xl md:text-5xl lg:text-6xl text-[#1A3F2B] dark:text-emerald-400">
+                Lo que nos <span className="font-normal">Define</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-light">
                 Nuestros valores fundamentales guían cada decisión que tomamos y cada producto que ofrecemos
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {values.map((value, i) => {
                 const Icon = value.icon
                 return (
-                  <Card key={i} className="shadow-sm border border-green-900/10 hover:shadow-md transition">
-                    <CardContent className="p-6 text-center space-y-4">
-                      <div className="w-12 h-12 bg-green-900/10 rounded-full flex items-center justify-center mx-auto">
-                        <Icon className="h-6 w-6 text-green-900" />
+                  <Card key={i} className="border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-xl hover:border-[#1A3F2B] dark:hover:border-emerald-500 transition-all duration-300">
+                    <CardContent className="p-8 text-center space-y-6">
+                      <div className="w-16 h-16 bg-[#1A3F2B]/10 dark:bg-emerald-500/10 rounded-lg flex items-center justify-center mx-auto">
+                        <Icon className="h-8 w-8 text-[#1A3F2B] dark:text-emerald-400" />
                       </div>
-                      <h3 className="text-xl font-semibold text-green-900">{value.title}</h3>
-                      <p className="text-muted-foreground">{value.description}</p>
+                      <h3 className="text-lg font-normal text-[#1A3F2B] dark:text-emerald-400">{value.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed text-sm">{value.description}</p>
                     </CardContent>
                   </Card>
                 )
@@ -118,22 +126,28 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-green-900/5">
+        <section className="py-24 bg-white dark:bg-slate-950">
           <div className="container mx-auto px-4 text-center">
-            <div className="max-w-2xl mx-auto space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-green-900">
-                ¿Listo para Comenzar?
+            <div className="max-w-2xl mx-auto space-y-8">
+              <h2 className="font-light text-3xl md:text-4xl lg:text-5xl text-[#1A3F2B] dark:text-emerald-400">
+                ¿Listo para <span className="font-normal">Comenzar</span>?
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-light">
                 Únete a miles de clientes satisfechos y descubre por qué somos la mejor opción para tus compras online
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild className="rounded-full bg-green-900 text-white hover:bg-green-800">
-                  <Link href="/productos">Explorar Productos</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="rounded-full border-green-900 text-green-900 hover:bg-green-900/10">
-                  <Link href="/contacto">Contactanos</Link>
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <Link
+                  href="/productos"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#1A3F2B] dark:bg-emerald-600 text-white text-sm font-light tracking-wide hover:bg-[#153021] dark:hover:bg-emerald-500 transition-all duration-300 rounded-lg"
+                >
+                  Explorar Productos
+                </Link>
+                <Link
+                  href="/contacto"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-[#1A3F2B]/30 dark:border-emerald-500/40 text-[#1A3F2B] dark:text-emerald-400 text-sm font-light tracking-wide hover:border-[#1A3F2B] dark:hover:border-emerald-400 hover:bg-[#1A3F2B]/5 dark:hover:bg-emerald-500/10 transition-all duration-300 rounded-lg"
+                >
+                  Contactanos
+                </Link>
               </div>
             </div>
           </div>

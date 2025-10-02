@@ -19,260 +19,178 @@ import { useToast } from "@/hooks/use-toast"
 const allProducts: Product[] = [
   {
     id: "1",
-    name: "Smartphone Premium",
-    price: 699.99,
-    originalPrice: 899.99,
-    image: "/placeholder.svg?height=300&width=300&text=Smartphone",
-    category: "Electrónicos",
+    name: "Sillón Clásico Velvet",
+    price: 799.99,
+    originalPrice: 999.99,
+    image: "/1.jpg",
+    category: "Sillones",
     inStock: true,
     featured: true,
   },
   {
     id: "2",
-    name: "Auriculares Inalámbricos",
-    price: 149.99,
-    image: "/placeholder.svg?height=300&width=300&text=Headphones",
-    category: "Electrónicos",
+    name: "Sillón Individual Nórdico",
+    price: 449.99,
+    image: "/2.jpg",
+    category: "Sillones",
     inStock: true,
   },
   {
     id: "3",
-    name: "Chaqueta de Cuero",
-    price: 299.99,
-    originalPrice: 399.99,
-    image: "/placeholder.svg?height=300&width=300&text=Leather+Jacket",
-    category: "Moda",
+    name: "Sofá Modular Lino",
+    price: 1299.99,
+    originalPrice: 1599.99,
+    image: "/3.jpg",
+    category: "Sofás",
     inStock: true,
   },
   {
     id: "4",
-    name: "Lámpara Moderna",
-    price: 89.99,
-    image: "/placeholder.svg?height=300&width=300&text=Modern+Lamp",
-    category: "Hogar",
-    inStock: false,
+    name: "Sillón Reclinable Piel",
+    price: 589.99,
+    image: "/4.jpg",
+    category: "Sillones",
+    inStock: true,
   },
   {
     id: "5",
-    name: "Laptop Gaming",
-    price: 1299.99,
-    originalPrice: 1599.99,
-    image: "/placeholder.svg?height=300&width=300&text=Gaming+Laptop",
-    category: "Electrónicos",
+    name: "Sofá Chaise Longue Premium",
+    price: 1699.99,
+    originalPrice: 1999.99,
+    image: "/5.jpg",
+    category: "Sofás",
     inStock: true,
     featured: true,
   },
   {
     id: "6",
-    name: "Zapatillas Deportivas",
-    price: 129.99,
-    image: "/placeholder.svg?height=300&width=300&text=Sport+Sneakers",
-    category: "Moda",
+    name: "Sillón de Lectura con Patas Madera",
+    price: 389.99,
+    image: "/6.jpg",
+    category: "Sillones",
     inStock: true,
   },
   {
     id: "7",
-    name: "Sofá Moderno",
+    name: "Sofá de Dos Cuerpos Minimalista",
     price: 899.99,
     originalPrice: 1199.99,
-    image: "/placeholder.svg?height=300&width=300&text=Modern+Sofa",
-    category: "Hogar",
+    image: "/7.jpg",
+    category: "Sofás",
     inStock: true,
   },
   {
     id: "8",
-    name: "Smartwatch",
+    name: "Sillón Puff Gigante",
     price: 249.99,
-    image: "/placeholder.svg?height=300&width=300&text=Smartwatch",
-    category: "Electrónicos",
+    image: "/8.jpg",
+    category: "Sillones",
     inStock: true,
   },
   {
     id: "9",
-    name: "Vestido Elegante",
-    price: 179.99,
-    originalPrice: 229.99,
-    image: "/placeholder.svg?height=300&width=300&text=Elegant+Dress",
-    category: "Moda",
+    name: "Sofá Cama Funcional",
+    price: 979.99,
+    originalPrice: 1299.99,
+    image: "/placeholder.svg?height=300&width=300&text=Sofá+Cama",
+    category: "Sofás",
     inStock: true,
   },
   {
     id: "10",
-    name: "Mesa de Centro",
+    name: "Sillón Acapulco",
     price: 199.99,
-    image: "/placeholder.svg?height=300&width=300&text=Coffee+Table",
-    category: "Hogar",
+    image: "/22.jpg",
+    category: "Sillones",
     inStock: true,
   },
   {
     id: "11",
-    name: "Tablet Pro",
-    price: 599.99,
-    image: "/placeholder.svg?height=300&width=300&text=Tablet+Pro",
-    category: "Electrónicos",
+    name: "Sofá Tres Cuerpos Tela Antimanchas",
+    price: 1099.99,
+    image: "/12.jpg",
+    category: "Sofás",
     inStock: true,
   },
   {
     id: "12",
-    name: "Abrigo de Invierno",
-    price: 199.99,
-    originalPrice: 299.99,
-    image: "/placeholder.svg?height=300&width=300&text=Winter+Coat",
-    category: "Moda",
+    name: "Sillón Giratorio de Oficina",
+    price: 399.99,
+    originalPrice: 499.99,
+    image: "/11.jpg",
+    category: "Sillones",
     inStock: true,
   },
   {
     id: "13",
-    name: "Espejo Decorativo",
-    price: 79.99,
-    image: "/placeholder.svg?height=300&width=300&text=Decorative+Mirror",
-    category: "Hogar",
+    name: "Sofá Seccional Esquinero",
+    price: 1499.99,
+    image: "/placeholder.svg?height=300&width=300&text=Sofá+Esquinero",
+    category: "Sofás",
     inStock: true,
   },
   {
     id: "14",
-    name: "Cámara Digital",
+    name: "Sillón Butaca de Diseño",
     price: 449.99,
     originalPrice: 549.99,
-    image: "/placeholder.svg?height=300&width=300&text=Digital+Camera",
-    category: "Electrónicos",
+    image: "/111.jpg",
+    category: "Sillones",
     inStock: true,
   },
   {
     id: "15",
-    name: "Botas de Cuero",
-    price: 159.99,
-    image: "/placeholder.svg?height=300&width=300&text=Leather+Boots",
-    category: "Moda",
+    name: "Sofá de Terciopelo Vintage",
+    price: 1159.99,
+    image: "/placeholder.svg?height=300&width=300&text=Sofá+Terciopelo",
+    category: "Sofás",
     inStock: false,
   },
   {
     id: "16",
-    name: "Planta Decorativa",
-    price: 24.99,
-    image: "/placeholder.svg?height=300&width=300&text=Scented+Candle",
-    category: "Hogar",
+    name: "Sillón Balancín para Exteriores",
+    price: 299.99,
+    image: "/222.jpg",
+    category: "Sillones",
     inStock: true,
   },
   {
     id: "17",
-    name: "Altavoz Bluetooth",
-    price: 89.99,
-    originalPrice: 119.99,
-    image: "/placeholder.svg?height=300&width=300&text=Bluetooth+Speaker",
-    category: "Electrónicos",
+    name: "Sofá Chesterfield Clásico",
+    price: 1899.99,
+    originalPrice: 2199.99,
+    image: "/placeholder.svg?height=300&width=300&text=Chesterfield",
+    category: "Sofás",
     inStock: true,
   },
   {
     id: "18",
-    name: "Bolso de Mano",
-    price: 119.99,
-    image: "/placeholder.svg?height=300&width=300&text=Leather+Handbag",
-    category: "Moda",
+    name: "Sillón Relax con Reposapiés",
+    price: 519.99,
+    image: "/placeholder.svg?height=300&width=300&text=Sillón+Relax",
+    category: "Sillones",
     inStock: true,
   },
   {
     id: "19",
-    name: "Cojines Decorativos",
-    price: 49.99,
-    image: "/placeholder.svg?height=300&width=300&text=Decorative+Pillows",
-    category: "Hogar",
+    name: "Sofá de Palets Rústico",
+    price: 549.99,
+    image: "/placeholder.svg?height=300&width=300&text=Sofá+Rústico",
+    category: "Sofás",
     inStock: true,
   },
   {
     id: "20",
-    name: "Monitor 4K",
+    name: "Sillón Colgante de Jardín",
     price: 349.99,
     originalPrice: 449.99,
-    image: "/placeholder.svg?height=300&width=300&text=4K+Monitor",
-    category: "Electrónicos",
+    image: "/222.jpg",
+    category: "Sillones",
     inStock: true,
   },
-  {
-    id: "21",
-    name: "Gafas de Sol",
-    price: 79.99,
-    image: "/placeholder.svg?height=300&width=300&text=Stylish+Sunglasses",
-    category: "Moda",
-    inStock: true,
-  },
-  {
-    id: "22",
-    name: "Vela Aromática",
-    price: 24.99,
-    image: "/placeholder.svg?height=300&width=300&text=Scented+Candle",
-    category: "Hogar",
-    inStock: true,
-  },
-  {
-    id: "23",
-    name: "Teclado Mecánico",
-    price: 129.99,
-    image: "/placeholder.svg?height=300&width=300&text=Mechanical+Keyboard",
-    category: "Electrónicos",
-    inStock: true,
-  },
-  {
-    id: "24",
-    name: "Bufanda de Lana",
-    price: 39.99,
-    originalPrice: 59.99,
-    image: "/placeholder.svg?height=300&width=300&text=Wool+Scarf",
-    category: "Moda",
-    inStock: true,
-  },
-  {
-    id: "25",
-    name: "Marco de Fotos",
-    price: 19.99,
-    image: "/placeholder.svg?height=300&width=300&text=Photo+Frame",
-    category: "Hogar",
-    inStock: true,
-  },
-  {
-    id: "26",
-    name: "Mouse Gaming",
-    price: 69.99,
-    image: "/placeholder.svg?height=300&width=300&text=Gaming+Mouse",
-    category: "Electrónicos",
-    inStock: true,
-  },
-  {
-    id: "27",
-    name: "Cinturón de Cuero",
-    price: 49.99,
-    image: "/placeholder.svg?height=300&width=300&text=Leather+Belt",
-    category: "Moda",
-    inStock: true,
-  },
-  {
-    id: "28",
-    name: "Florero Moderno",
-    price: 34.99,
-    image: "/placeholder.svg?height=300&width=300&text=Modern+Vase",
-    category: "Hogar",
-    inStock: true,
-  },
-  {
-    id: "29",
-    name: "Cargador Inalámbrico",
-    price: 29.99,
-    originalPrice: 39.99,
-    image: "/placeholder.svg?height=300&width=300&text=Wireless+Charger",
-    category: "Electrónicos",
-    inStock: true,
-  },
-  {
-    id: "30",
-    name: "Reloj de Pulsera",
-    price: 199.99,
-    image: "/placeholder.svg?height=300&width=300&text=Wrist+Watch",
-    category: "Moda",
-    inStock: true,
-  },
-]
+];
 
-const categories = ["Todos", "Electrónicos", "Moda", "Hogar"]
+const categories = ["Todos", "Sillones", "Sofás"]
 const PRODUCTS_PER_PAGE = 9
 
 export default function ProductsPage() {
@@ -327,19 +245,23 @@ export default function ProductsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white dark:bg-slate-950">
       <Navbar
         cartItemsCount={cartItems.length}
         onCartOpen={() => {}}
         cartComponent={<ShoppingCart items={cartItems} onUpdateCart={handleUpdateCart} />}
       />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-16">
         {/* Page Header */}
-        <div className="text-center space-y-4 mb-12">
-          <SectionTag className="bg-green-900/90 text-white">Catálogo</SectionTag>
-          <h1 className="text-4xl md:text-5xl font-bold text-green-900">Nuestros Productos</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center space-y-6 mt-5 mb-20 max-w-2xl mx-auto">
+          <span className="text-xs font-medium text-[#1A3F2B]/60 dark:text-emerald-400/70 uppercase tracking-widest">
+            Catálogo
+          </span>
+          <h1 className="font-light text-4xl md:text-5xl lg:text-6xl text-[#1A3F2B] dark:text-emerald-400">
+            Nuestros <span className="font-normal">Productos</span>
+          </h1>
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-light">
             Descubre nuestra amplia selección de productos de calidad premium
           </p>
         </div>
@@ -349,33 +271,33 @@ export default function ProductsPage() {
           <div className="lg:col-span-1 space-y-6">
             <div className="sticky top-20 space-y-6">
               {/* Search and Sort Card */}
-              <Card className="border border-green-100 shadow-sm hover:shadow-md rounded-xl transition">
+              <Card className="border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-xl">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-green-900">
-                    <Filter className="h-5 w-5 text-green-800" />
+                  <CardTitle className="flex items-center gap-2 text-[#1A3F2B] dark:text-emerald-400 font-light">
+                    <Filter className="h-5 w-5" />
                     Filtros
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {/* Search */}
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-green-700" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#1A3F2B] dark:text-emerald-400" />
                     <Input
                       placeholder="Buscar productos..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="pl-10 border-green-200 focus:ring-green-700 focus:border-green-700"
+                      className="pl-10 border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-gray-100 rounded-lg"
                     />
                   </div>
 
                   {/* Sort */}
                   <div className="space-y-2">
-                    <label className="text-sm font-medium flex items-center gap-2 text-green-800">
+                    <label className="text-sm font-light flex items-center gap-2 text-gray-700 dark:text-gray-300">
                       <ArrowUpDown className="h-4 w-4" />
                       Ordenar por
                     </label>
                     <Select value={sortBy} onValueChange={setSortBy}>
-                      <SelectTrigger className="border-green-200 focus:ring-green-700">
+                      <SelectTrigger className="border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-gray-100 rounded-lg">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -389,9 +311,9 @@ export default function ProductsPage() {
               </Card>
 
               {/* Categories Card */}
-              <Card className="border border-green-100 shadow-sm hover:shadow-md rounded-xl transition">
+              <Card className="border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-xl">
                 <CardHeader>
-                  <CardTitle className="text-green-900">Categorías</CardTitle>
+                  <CardTitle className="text-[#1A3F2B] dark:text-emerald-400 font-light">Categorías</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
@@ -407,18 +329,18 @@ export default function ProductsPage() {
                             setSelectedCategory(category)
                             setCurrentPage(1)
                           }}
-                          className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
+                          className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-all duration-300 ${
                             selectedCategory === category
-                              ? "bg-green-900 text-white"
-                              : "hover:bg-green-50 text-green-800"
+                              ? "bg-[#1A3F2B] dark:bg-emerald-600 text-white"
+                              : "hover:bg-[#1A3F2B]/5 dark:hover:bg-emerald-500/10 text-gray-700 dark:text-gray-300"
                           }`}
                         >
-                          <span className="font-medium">{category}</span>
+                          <span className="font-light">{category}</span>
                           <Badge
                             className={
                               selectedCategory === category
-                                ? "bg-green-700 text-white"
-                                : "border-green-300 text-green-900"
+                                ? "bg-[#153021] dark:bg-emerald-500 text-white"
+                                : "border border-gray-300 dark:border-slate-600 text-gray-600 dark:text-gray-400 bg-transparent"
                             }
                           >
                             {count}
@@ -435,8 +357,8 @@ export default function ProductsPage() {
           {/* Products Grid */}
           <div className="lg:col-span-3">
             {/* Results Info */}
-            <div className="flex items-center justify-between mb-6">
-              <p className="text-green-800">
+            <div className="flex items-center justify-between mb-8">
+              <p className="text-gray-600 dark:text-gray-400 font-light">
                 Mostrando {startIndex + 1}-{Math.min(startIndex + PRODUCTS_PER_PAGE, filteredAndSortedProducts.length)}{" "}
                 de {filteredAndSortedProducts.length} productos
               </p>
@@ -444,14 +366,14 @@ export default function ProductsPage() {
 
             {/* Products Grid */}
             {paginatedProducts.length > 0 ? (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {paginatedProducts.map((product) => (
                   <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12">
-                <p className="text-green-800 text-lg">No se encontraron productos</p>
+              <div className="text-center py-16">
+                <p className="text-gray-600 dark:text-gray-400 text-lg font-light mb-6">No se encontraron productos</p>
                 <Button
                   variant="outline"
                   onClick={() => {
@@ -459,7 +381,7 @@ export default function ProductsPage() {
                     setSelectedCategory("Todos")
                     setCurrentPage(1)
                   }}
-                  className="mt-4 border-green-700 text-green-800 hover:bg-green-50"
+                  className="border border-[#1A3F2B]/30 dark:border-emerald-500/40 text-[#1A3F2B] dark:text-emerald-400 hover:border-[#1A3F2B] dark:hover:border-emerald-400 hover:bg-[#1A3F2B]/5 dark:hover:bg-emerald-500/10 rounded-lg font-light"
                 >
                   Limpiar filtros
                 </Button>
@@ -473,7 +395,7 @@ export default function ProductsPage() {
                   variant="outline"
                   onClick={() => handlePageChange(currentPage - 1)}
                   disabled={currentPage === 1}
-                  className="border-green-700 text-green-800 hover:bg-green-50"
+                  className="border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:border-[#1A3F2B] dark:hover:border-emerald-400 hover:bg-[#1A3F2B]/5 dark:hover:bg-emerald-500/10 rounded-lg font-light disabled:opacity-50"
                 >
                   Anterior
                 </Button>
@@ -482,10 +404,10 @@ export default function ProductsPage() {
                     key={page}
                     variant={currentPage === page ? "default" : "outline"}
                     onClick={() => handlePageChange(page)}
-                    className={`w-10 h-10 rounded-full ${
+                    className={`w-10 h-10 rounded-lg font-light ${
                       currentPage === page
-                        ? "bg-green-900 text-white"
-                        : "border-green-700 text-green-800 hover:bg-green-50"
+                        ? "bg-[#1A3F2B] dark:bg-emerald-600 text-white hover:bg-[#153021] dark:hover:bg-emerald-500"
+                        : "border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:border-[#1A3F2B] dark:hover:border-emerald-400 hover:bg-[#1A3F2B]/5 dark:hover:bg-emerald-500/10"
                     }`}
                   >
                     {page}
@@ -495,7 +417,7 @@ export default function ProductsPage() {
                   variant="outline"
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage === totalPages}
-                  className="border-green-700 text-green-800 hover:bg-green-50"
+                  className="border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:border-[#1A3F2B] dark:hover:border-emerald-400 hover:bg-[#1A3F2B]/5 dark:hover:bg-emerald-500/10 rounded-lg font-light disabled:opacity-50"
                 >
                   Siguiente
                 </Button>
